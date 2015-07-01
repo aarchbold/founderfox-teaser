@@ -19,25 +19,37 @@ gulp.task('icons', function() { 
         .pipe(gulp.dest('./webapp/static/fonts')); 
 });
 
-gulp.task('css', function() { 
-    return gulp.src(config.sassPath + '/style.scss')
-         .pipe(sass({
-             style: 'compressed',
-             loadPath: [
+gulp.task('sass', function() {
+    return sass(config.sassPath + '/styles.scss', { 
+    		style: 'expanded',
+            loadPath: [
                  './src/sass',
                  config.bowerDir + '/bootstrap-sass-official/assets/stylesheets',
                  config.bowerDir + '/fontawesome/scss',
              ]
-         }) 
-        .on("error", notify.onError(function (error) {
-                 return "Error: " + error.message;
-         }))) 
-         .pipe(gulp.dest('./webapp/static/css')); 
+    	})
+        .pipe(gulp.dest('./webapp/static/css'));
 });
+
+// gulp.task('css', function() { 
+//     return gulp.src(config.sassPath + '/styles.scss')
+//          .pipe(sass({
+//              style: 'compressed',
+//              loadPath: [
+//                  './src/sass',
+//                  config.bowerDir + '/bootstrap-sass-official/assets/stylesheets',
+//                  config.bowerDir + '/fontawesome/scss',
+//              ]
+//          }) 
+//         .on("error", notify.onError(function (error) {
+//                  return "Error: " + error.message;
+//          }))) 
+//          .pipe(gulp.dest('./webapp/static/css')); 
+// });
 
 // Rerun the task when a file changes
  gulp.task('watch', function() {
-     gulp.watch(config.sassPath + '/**/*.scss', ['css']); 
+     gulp.watch(config.sassPath + '/**/*.scss', ['sass']); 
 });
 
-  gulp.task('default', ['bower', 'icons', 'css']);
+  gulp.task('default', ['bower', 'icons', 'sass']);
