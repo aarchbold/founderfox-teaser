@@ -1,0 +1,25 @@
+{
+  "name": "founderfox-teaser",
+  "version": "1.0.0",
+  "homepage": "https://github.com/aarchbold/founderfox-teaser",
+  "authors": [
+    "Andrew Archbold <pulsegrenade@gmail.com>"
+  ],
+  "description": "A teaser site for the founderfox iOS app",
+  "main": "js/scripts.js",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.5",
+    "fontawesome": "~4.3.0"
+  }
+}
