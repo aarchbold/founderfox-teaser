@@ -31,22 +31,6 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('./webapp/static/css'));
 });
 
-// gulp.task('css', function() { 
-//     return gulp.src(config.sassPath + '/styles.scss')
-//          .pipe(sass({
-//              style: 'compressed',
-//              loadPath: [
-//                  './src/sass',
-//                  config.bowerDir + '/bootstrap-sass-official/assets/stylesheets',
-//                  config.bowerDir + '/fontawesome/scss',
-//              ]
-//          }) 
-//         .on("error", notify.onError(function (error) {
-//                  return "Error: " + error.message;
-//          }))) 
-//          .pipe(gulp.dest('./webapp/static/css')); 
-// });
-
 // Rerun the task when a file changes
  gulp.task('watch', function() {
      gulp.watch(config.sassPath + '/**/*.scss', ['sass']); 

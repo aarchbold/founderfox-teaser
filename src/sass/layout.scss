@@ -1,0 +1,49 @@
+body {
+	background-color: black;
+}
+
+.main-container {
+	position: relative;
+	max-width: rem(1420px);
+	margin: 0 auto;
+	padding: 0px rem(20px);
+}
+
+.footer-container {
+	min-height: rem(300px);
+	color: white;
+	background-color: $ff-green;
+}
+
+
+
+// TODO: move to home maybe
+.home-section {
+	min-height: rem(1000px);
+}
+
+.hero-home {
+	@extend .home-section;
+	background-color: black;
+	color: white;
+}
+
+.video-home {
+	@extend .home-section;
+	background-color: $ff-red;
+	color: white;
+}
+
+.chat-home {
+	@extend .home-section;
+	background-color: $ff-blue;
+	color: white;
+}
+
+.sponsors-home {
+	min-height: rem(142px);
+	color: $ff-grey;
+	background-color: white;
+}
+
+
