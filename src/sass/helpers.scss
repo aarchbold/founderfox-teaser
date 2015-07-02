@@ -7,3 +7,17 @@
 
 
 // Mixins
+
+// Just regular re-usable css
+.push-right {
+	float: right;
+}
+
+.push-right-spaced {
+	float: right;
+	margin-left: rem(20px);
+}
+
+.push-left {
+	float: left;
+}
